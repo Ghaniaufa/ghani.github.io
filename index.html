@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Life About Sport</title>
+    <link rel="stylesheet" href="UCP.css">
+    <link rel="stylesheet" href="UCP.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">A Daily Sport 🏅</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=1oorTNK_qw4">Tentang Badminton</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=XAmjaMCkl3I">Tentang SepakBola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=fSq-t9RmWY0">Tentang Baseball</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="time" style="float: right;">
+        <p style="text-align: center;"><span id="currentDate"></span></p>
+        <p style="text-align: center;"><span id="currentTime"></span></p>
+    </div>
+
+    <div class="container" style="float: left;">
+        <h2>Selamat Datang Warga Sport</h2>
+        <p>Buat kamu pecinta OlahRaga.</p>
+
+    </div>
+
+
+
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="kok.jpg" alt="Badminton" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="bola.jpg" alt="SepakBola" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="baseball.jpg" alt="Baseball" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                crossorigin="anonymous"></script>
+        </button>
+    </div>
+
+    <div class="container">
+        <main class="grid">
+            <article>
+                <a href="https://www.youtube.com/watch?v=uIIJqNmpEqw&pp=ygURc3VkaXJtYW4gY3VwIDIwMjM%3D">
+                <img src="sudirman.jpg" width="300px" height="300">
+                <div class="konten">
+                    <h2>🏸Sudirman CUP 2023</h2>
+                    <p>Tim Bulu Tangkis Indonesia gagal masuk  Semi Final di Sudirman CUP 2023.</p>
+                </div>
+                </a>
+            </article>
+            <article>
+                <a href="https://www.youtube.com/watch?v=iHKxMX7wA8E&pp=ygUdc2VqYXJhaCBCYXNlYmFsbCBkaSBpbmRvbmVzaWE%3D">
+                <img src="bbal.jpg"  width="300px" height="300">
+                <div class="konten">
+                    <h2>⚾Sejarah Baseball Indonesia</h2>
+                    <p>Ternyata ini lah Tim pertama Baseball Indonesia sampai saat ini.</p>
+                </div>
+                </a>
+            </article>
+            <article>
+                <a href="https://www.youtube.com/watch?v=iJEeGHehWmU&pp=ygUfdGltbmFzIGluZG9uZXNpYSBzZWEgZ2FtZXMgMjAyMw%3D%3D">
+                <img src="timnas.jpg"  width="300px" height="300">
+                <div class="konten">
+                    <h2>⚽Timnas Indonesia SEA Games 2023</h2>
+                    <p>Akhirnya setelah penantian lama 32 Tahun, Indonesia akhirnya meraih Medali Emas di SEA Games 2023 di Kamboja.</p>
+                </div>
+                </a>
+            </article>
+        </main>
+        <footer class="bg-dark text-light">
+            <div class="col-6">
+                <div class="text-center ">
+                    <p>Copyright Daily Sport &copy; 2023</p>
+                </div>
+            </div>
+        </footer>
+      
+
+</body>
+<script>
+    function updateDateTime() {
+        var currentDateElement = document.getElementById("currentDate");
+        var currentTimeElement = document.getElementById("currentTime");
+
+        var currentDate = new Date();
+        var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        currentDateElement.innerText = currentDate.toLocaleDateString('en-US', dateOptions);
+
+        var currentTime = currentDate.toLocaleTimeString('en-US');
+        currentTimeElement.innerText = currentTime;
+    }
+    setInterval(updateDateTime, 1000); 
+</script>
+
+</html>
